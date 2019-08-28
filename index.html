@@ -145,6 +145,42 @@ input:checked + label + .reveal {
 input + label:after { content: ""; }
 input:checked + label:after { content: ""; }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*a {
+  color: #0254EB;
+}
+a:visited {
+  color: #0254EB;
+}*/
+
+
+a.morelink {
+  text-decoration:none;
+  outline: none;
+}
+.morecontent span {
+  display: none;
+
+}
+
+
+
+
+
 </style>
 
 
@@ -168,6 +204,7 @@ src="https://www.googletagmanager.com/gtag/js?id=UA-111894110-1"></script>
   <link rel="shortcut icon" href="UCSD.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -186,7 +223,7 @@ src="https://www.googletagmanager.com/gtag/js?id=UA-111894110-1"></script>
 
       <p>I am a final year student at <a target="_blank" href="http://www.iitkgp.ac.in/">IIT Kharagpur</a>
       pursuing Dual Degree (B.Tech. + M.Tech.) in <a target="_blank" href = "http://www.iitkgp.ac.in/department/MI">
-      Mining Engineering</a>. I have mostly worked on problems related to computer vision &amp; deep learning. I did my Bachelor Thesis on <i>Continual Learning</i> under the guidance of <a target="_blank" href="https://scholar.google.co.in/citations?user=5bXSZPYAAAAJ&hl=en">Prof. Pabitra Mitra</a>, <i>Department of Computer Science, IIT Kharagpur</i>.
+      Mining Engineering</a>. I have worked on problems mostly related to computer vision &amp; deep learning. I did my Bachelor Thesis on <i>Continual Learning</i> under the guidance of <a target="_blank" href="https://scholar.google.co.in/citations?user=5bXSZPYAAAAJ&hl=en">Prof. Pabitra Mitra</a>, <i>Department of Computer Science, IIT Kharagpur</i>.
       </p>
       
       <p>Last summer I worked at <a target="_blank" href="https://www.research.ibm.com/labs/india/">IBM Research</a> as
@@ -218,11 +255,11 @@ src="https://www.googletagmanager.com/gtag/js?id=UA-111894110-1"></script>
 	</a><br>
 	<strong>Summer Research Intern</strong><br>
 	<em>Bangalore, India </em > &nbsp;&bull; May - August 2019 &nbsp; <a target="_blank" class="doc" href="https://drive.google.com/file/d/1Aieq4qQNiH8jxE9rUWwaCMMmy8FOWSDn/view">&bull; Poster Link</a><br>
-	<p>
-    Worked on developing deep learning models for agricultural field boundary segmentation using 
-    multi-spectral and multi-temporal satellite images. • Designed a deep <b>Spatio-Temporal Segmentation Network</b> architecture (ST-Net) which can extract both temporal and spatial features of a
+	<p><div class="more">
+    Objective was to develop deep learning models for agricultural field boundary segmentation using 
+    multi-spectral and multi-temporal satellite images. I  designed a deep <b>Spatio-Temporal Segmentation Network</b> architecture (ST-Net) which can extract both temporal and spatial features of a
     region from the time series of its SAR snapshots and RGB images leveraging the phenology timeline of agriculture crops. ST-Net uses a combination of Pixel-wise 3D LSTMs and DeepLabV3+ for temporal and spatial feature extraction, respectively. Achieved an improvement of 6% in mIOU compared to its existing counterparts.
-  </p>
+  </div></p>
   </div>
 </div>
 
@@ -234,10 +271,10 @@ src="https://www.googletagmanager.com/gtag/js?id=UA-111894110-1"></script>
       </a><br>
       <strong>Machine Learning Intern</strong><br>
       <em>Bangalore, India </em > &nbsp;&bull; May - July 2018 &nbsp; <a target="_blank" class="doc" href="https://drive.google.com/open?id=1byyC182-pUc3eX-1QolCbmyJrMSQo6eh">&bull; Demo Link</a><br>
-      <p>
-        Worked on Person Re-identification problem to identify / re-identify people in
-        real time and tag them with unique labels. Proposed a new loss function called <b>Cluster Loss</b> for deep CNN architectures motivated from <a target="_blank" href="https://en.wikipedia.org/wiki/Triplet_loss"> triplet-loss</a>. Cluster Loss learns feature representations of people in a class independent way, forming round and separated clusters of all the classes. Improved the Rank-1 accuracy by 3% and mAP by 6% on two popular datasets.
-      </p>
+      <p><div class="more">
+        Worked on <i>Person Re-identification (ReID)</i> problem to identify / re-identify people in
+        real time and tag them with unique labels. Proposed a new loss function called <b>Cluster Loss</b> for deep CNN architectures motivated from triplet loss. Cluster Loss learns feature representations of people in a class independent way, forming round and separated clusters of all the classes. Improved the Rank-1 accuracy by 3% and mAP by 6% on two popular datasets.
+      </div></p>
     </div>
   </div>
 
@@ -252,17 +289,17 @@ src="https://www.googletagmanager.com/gtag/js?id=UA-111894110-1"></script>
 		  <papertitle>Cluster Loss for Person Re-Identification</papertitle>
         </a><br>
         <i>Doney Alex, <strong>Zishan Sami</strong>, Sumandeep Banerjee, Subrat Panda</i><br>
-        Published in <a target="_blank" class="doc" href="https://cvit.iiit.ac.in/icvgip18/">ICVGIP 2018 </a> &nbsp; <a target="_blank" class="doc" href="https://arxiv.org/pdf/1812.10325.pdf">&bull; arXiv Link</a> &nbsp;&nbsp; <a target="_blank" class="doc" href="https://drive.google.com/open?id=1byyC182-pUc3eX-1QolCbmyJrMSQo6eh">&bull; Demo Link</a><br>
-      <p>
+        Published in <a target="_blank" href="https://cvit.iiit.ac.in/icvgip18/">ICVGIP 2018 </a> &nbsp; <a target="_blank" class="doc" href="https://arxiv.org/pdf/1812.10325.pdf">&bull; arXiv Link</a> &nbsp;&nbsp; <a target="_blank" class="doc" href="https://drive.google.com/open?id=1byyC182-pUc3eX-1QolCbmyJrMSQo6eh">&bull; Demo Link</a><br>
+      <p><div class="more">
         <i>Abstract : </i>Person re-identification (ReID) is an important problem in computer vision, especially for video surveillance applications. The problem focuses on identifying people across different cameras or across different frames of the same camera. The main challenge lies in identifying the similarity of the same person against large appearance and structure variations, while differentiating between individuals. Recently, deep learning networks with triplet loss have become a common framework for person ReID. However, triplet loss focuses on obtaining correct orders on the training set. We demonstrate that it performs inferior in a clustering task. In this paper, we design a cluster loss, which can lead to the model output with a larger inter-class variation and a smaller intra-class variation compared to the triplet loss. As a result, our model has a better generalization ability and can achieve higher accuracy on the test set especially for a clustering task. We also introduce a batch hard training mechanism for improving the results and faster convergence of training.
-      </p>
+      </div></p>
     </div>
   </div>
 
   <div class="row">
     <heading>Research Projects</heading>
     <br /><br />
-        My reserach interests include machine learning, neural networks and investing strategies. In particular, I'm interested in research applicable to finance (buy-side), macroeconomics and neuroscience.
+        My reserach interests broadly include machine learning and deep learning. In particular, I'm interested in research applicable to computer vision, continual learning / lifelong learning, and natural language understanding.
   </div>
 
   <div class="row">
@@ -273,7 +310,7 @@ src="https://www.googletagmanager.com/gtag/js?id=UA-111894110-1"></script>
         </a><br>
         <strong>Bachelor Thesis</strong> | Guide : <a target="_blank" href="https://scholar.google.co.in/citations?user=5bXSZPYAAAAJ&hl=en">Pabitra Mitra</a><br>
        <em>Computer Science Department </em > &nbsp;&bull; Aug'18 - Apr'19 &nbsp; <a target="_blank" class="doc" href="https://drive.google.com/open?id=1Tx08dNaa9DvERyj7Ixt80vPXelQGLiDo">&bull; Thesis Link</a><br>
-      <p>
+      <p><div class="more">
        <i> Abstract</i> : Catastrophic Forgetting in deep neural networks is a term used in Continual
 Learning literature to signify the drastic performance drop on earlier learned
 tasks while learning a new task on the same model. The focus in continual
@@ -285,7 +322,7 @@ and have presented a detailed comparitive analysis between all the methods
 on CIFAR100 dataset, by splitting it into 5 separate independent tasks. We
 have also tried and tested merging two methods together and concluded that
 our best performing combination is <a target="_blank" href="https://arxiv.org/abs/1606.09282">Lwf[8]</a>  and <a target="_blank" href="https://arxiv.org/pdf/1612.00796.pdf"> EWC[7]</a> combined.
-      </p>
+      </div></p>
     </div>
   </div>
 
@@ -297,18 +334,18 @@ our best performing combination is <a target="_blank" href="https://arxiv.org/ab
         </a><br>
          <strong>Research Project</strong> | Guide : <a target="_blank" href="https://scholar.google.co.in/citations?user=5bXSZPYAAAAJ&hl=en">Pabitra Mitra</a><br>
        <em>Computer Science Department </em > &nbsp;&bull; Dec'17 - Apr'18 &nbsp;<a target="_blank" class="doc" href="https://github.com/ZISHANSAMI102/FIRST-IMPRESSION">&bull; GitHub Repo</a><br>
-      <p>
+      <p><div class="more">
         Human Personality Traits Recognition from short introductory videos of users from Youtube (ECCV16 Challenge).
         Implemented a paper proposing Deep Bi-modal Regression Network to predict
         "big five" personality traits of people from the first impression of their videos.
-	 </p>
+	 </div></p>
     </div>
   </div>
 
   <div class="row">
 	<heading>Hackathons / Competitions</heading>
   	<br /><br />
-  		  My reserach interests include machine learning, neural networks and investing strategies. In particular, I'm interested in research applicable to finance (buy-side), macroeconomics and neuroscience.
+  		  
   </div>
 
 
@@ -319,12 +356,12 @@ our best performing combination is <a target="_blank" href="https://arxiv.org/ab
         <papertitle>Microsoft Code.Fun.Do 2017 </papertitle>
       </a><br>
       <strong>Top 3 Team</strong> &bull; January 2017 &nbsp; <a target="_blank", class="doc", href="https://www.youtube.com/watch?v=1ni_LsOl4YE&list=PL0aneeQMqbvLjs0cwi2qGH2r_ZPdHb2xG&index=7">&bull; Demo Link</a><br>
-      <p>  
+      <p>  <div class="more">
         Secured runner up position in the winner list out of 20+ participating teams at IIT Kharagpur. <br>
         We developed a <b>messenger bot</b> called <a target="_blank" href="https://www.facebook.com/chhukchhuk2/">Chhuk-Chhuk</a> which can respond to people on railway queries
         like the status of trains, their routes, PNR status, etc.
         Built a data scraper for real time railway information &amp; integrated multiple APIs for language understanding capabilities. Full application backend was built on PHP.
-	  </p>
+	 </div> </p>
     </div>
   </div>
 
@@ -335,25 +372,25 @@ our best performing combination is <a target="_blank" href="https://arxiv.org/ab
         <papertitle>Capillary Data Science Challenge 2017</papertitle>
       </a><br>
       <strong>Runner Up</strong> &bull; September 2017 &nbsp; <a target="_blank", class="doc", href="https://github.com/zishansami102/Recommendation-Engine">&bull; GitHub Repo </a><br>
-      <p>
+      <p><div class="more">
         We secured second position in the Machine Learning category out of 50+ participating teams.<br>
         We developed a movie <b>recommendation system</b> which can suggest movies to the users based on their ratings history on the mobile application. We did it by implementing a state of the art recommendation model called Biased Matrix Factorization on 1-M Movielens dataset using Tensorflow and integrated it on Flask backend with UI on android app.
 
-	  </p>
+	  </div></p>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-proj-pic"><img src='images/kgp_logo.svg'></div>
+    <div class="col-proj-pic"><img src='images/open.png'></div>
     <div class="col-proj-desc">
   	<a target="_blank" href="https://drive.google.com/open?id=1ImL2IGAlEVb1Y3WuMgRDKk2DwEG2kf5z">
   	  <papertitle>OpenSoft 2019, Technology General Championship</papertitle>
   	</a><br>
   	<strong>Winner</strong> &bull; March 2019 &nbsp; <a target="_blank" class="doc" href="https://drive.google.com/open?id=1ImL2IGAlEVb1Y3WuMgRDKk2DwEG2kf5z">&bull; Report Link </a><br>
-  	<p>
+  	<p><div class="more">
       Designed a <b>natural language search engine</b> system for lawyers, legal experts and ordinary people where they can search for legal acts and previous court cases more effectively.
       Integrated submodules like Case Summarizer, Spelling Corrector, Query type detector, etc. Used <a target="_blank" href="https://github.com/facebookresearch/InferSent">InferSent</a> as our sentence embeding model to rank sentences with respect to the input query. Developed an effective system design for reducing the search domain to small search space for fast ranking.
-    </p>
+   </div> </p>
     </div>
   </div>
 
@@ -364,9 +401,9 @@ our best performing combination is <a target="_blank" href="https://arxiv.org/ab
 		<papertitle>Safety Data Analytics Challenge 2017</papertitle>
 	  </a><br>
 	 <strong>Winner</strong> &bull; September 2017 &nbsp; <a target="_blank" class="doc" href="https://github.com/zishansami102/Safety-Data-Analytics-Solution">&bull; GitHub Repo </a><br>
-	  <p>
+	  <p><div class="more">
     Developed a machine learning model which can minimize the cost of customer retention &amp; acquisition of a telecom company by accurately predicting its probable customer churning.
-    </p>
+    </div></p>
 	</div>
   </div>
 
@@ -376,17 +413,17 @@ our best performing combination is <a target="_blank" href="https://arxiv.org/ab
 
   <div class="row">
 
-    <div class="col-proj-pic"><img src='images/open.png'></div>
+    <div class="col-proj-pic"><img src='images/cnn.png'></div>
     <div class="col-proj-desc">
       <a target="_blank" href="https://github.com/zishansami102/CNN-from-Scratch">
         <papertitle>CNN-from-Scratch</papertitle>
       </a><br>
       <strong><i class="fa fa-github"></i> GitHub &nbsp; &nbsp; <i class="fa fa-star"></i> 140+ &nbsp; &nbsp; <i class="fa fa-code-fork" aria-hidden="true"></i> 50+</strong><br>
       <a target="_blank" class="doc" href="https://github.com/zishansami102/CNN-from-Scratch">&bull; Repository </a>&nbsp; &nbsp; <a target="_blank" class="doc" href="https://cnndigits.pythonanywhere.com/  ">&bull; Live Demo </a>
-      <p>
-        A simple CNN implemented in <b>Numpy</b>. Most popular repository for the
+      <p><div class="more">
+        A simple CNN implemented in <b>Numpy</b>. It is currently the most popular repository for the
         ground up implementation of CNNs. Demo running on Flask server.
-      </p>
+      </div></p>
     </div>
   </div>
 
@@ -437,3 +474,39 @@ our best performing combination is <a target="_blank" href="https://arxiv.org/ab
 </div>
 </body>
 </html>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+  var showChar = 270;
+  var ellipsestext = " ... ";
+  var moretext = "more";
+  var lesstext = "less";
+  $('.more').each(function() {
+    var content = $(this).html();
+
+    if(content.length > showChar) {
+
+      var c = content.substr(0, showChar);
+      var h = content.substr(showChar, content.length - showChar);
+
+      var html = c + '<span class="moreelipses">'+ellipsestext+'</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">'+moretext+'</a></span>';
+
+      $(this).html(html);
+    }
+
+  });
+
+  $(".morelink").click(function(){
+    if($(this).hasClass("less")) {
+      $(this).removeClass("less");
+      $(this).html(moretext);
+    } else {
+      $(this).addClass("less");
+      $(this).html(lesstext);
+    }
+    $(this).parent().prev().toggle();
+    $(this).prev().toggle();
+    return false;
+  });
+});
+</script>
