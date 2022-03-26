@@ -1,49 +1,63 @@
-
-
 <!DOCTYPE html>
 <html>
 
 <style>
-* {
+  * {
     box-sizing: border-box;
-}
+  }
 
-.row::after {
+  .row::after {
     content: "";
     clear: both;
     display: table;
-}
+  }
 
-/* Spacing between rows */
-.row + .row { margin-top: 40px; }
+  /* Spacing between rows */
+  .row+.row {
+    margin-top: 40px;
+  }
 
-/* For mobile phones: */
-[class*="col-"] {
+  /* For mobile phones: */
+  [class*="col-"] {
     width: 100%;
-}
+  }
 
-.col-prof-pic { margin:auto; }
-/*.col-proj-pic { display:none; }*/
+  .col-prof-pic {
+    margin: auto;
+  }
+
+  /*.col-proj-pic { display:none; }*/
 
 
-@media only screen and (max-width: 499px) {
+  @media only screen and (max-width: 499px) {
+
     /* For mobile: */
     .container {
-        max-width:100%;
-        margin:auto;
+      max-width: 100%;
+      margin: auto;
     }
+
     /*.col-bio {max-width: 65%;}*/
     /*.col-prof-pic {float:right; margin-left:20px;}*/
-    .col-proj-pic {max-width: 50%; float:left; display:inline; padding-right: 15px; }
-    .col-proj-desc {max-width: 50%; float:left;}
-}
+    .col-proj-pic {
+      max-width: 50%;
+      float: left;
+      display: inline;
+      padding-right: 15px;
+    }
 
-.container {
-    width:max-width;
-    padding:15px;
-}
+    .col-proj-desc {
+      max-width: 50%;
+      float: left;
+    }
+  }
 
-ul {
+  .container {
+    width: max-width;
+    padding: 15px;
+  }
+
+  ul {
     list-style: none;
     margin-left: 0px;
     padding-left: 15px;
@@ -52,119 +66,142 @@ ul {
     columns: 1;
     -webkit-columns: 1;
     -moz-columns: 1;
-}
+  }
 
-@media only screen and (min-width: 500px) {
+  @media only screen and (min-width: 500px) {
+
     /* For desktop: */
     .container {
-        max-width:800px;
-        margin:auto;
+      max-width: 800px;
+      margin: auto;
     }
-    .col-bio {max-width: 65%;}
-    .col-prof-pic {float:right; margin-left:20px;}
-    .col-proj-pic {max-width: 25%; float:left; display:inline; padding-right: 20px; }
-    .col-proj-desc {max-width: 75%; float:left;}
-}
 
-@media only screen and (min-width: 800px) {
+    .col-bio {
+      max-width: 65%;
+    }
+
+    .col-prof-pic {
+      float: right;
+      margin-left: 20px;
+    }
+
+    .col-proj-pic {
+      max-width: 25%;
+      float: left;
+      display: inline;
+      padding-right: 20px;
+    }
+
+    .col-proj-desc {
+      max-width: 75%;
+      float: left;
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+
     /* For desktop: */
     ul {
-        columns: 2;
-        -webkit-columns: 2;
-        -moz-columns: 2;
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
     }
-}
+  }
 
 
-a {
+  a {
     color: #1772d0;
-    text-decoration:none;
-}
+    text-decoration: none;
+  }
 
-a:focus, a:hover {
+  a:focus,
+  a:hover {
     color: #f09228;
-    text-decoration:none;
-}
+    text-decoration: none;
+  }
 
-body,td,th,tr,p,a {
+  body,
+  td,
+  th,
+  tr,
+  p,
+  a {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
     font-size: 14px;
-    line-height:130%;
-}
+    line-height: 130%;
+  }
 
-strong {
+  strong {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
     font-size: 15px;
-	font-weight: 700;
-}
+    font-weight: 700;
+  }
 
-heading {
+  heading {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
     font-size: 22px;
-}
+  }
 
-papertitle {
+  papertitle {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 700;
-}
+  }
 
-name {
+  name {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
     font-size: 40px;
-}
+  }
 
-.col-proj-pic img {
+  .col-proj-pic img {
     max-width: 100%;
-}
+  }
 
-.cropcircle {
-	border-radius: 100%;
+  .cropcircle {
+    border-radius: 100%;
     background: #eee no-repeat center;
     background-size: cover;
-}
+  }
 
-#profile-img{
+  #profile-img {
     height: 250px;
     width: 250px;
     background-image: url(images/zishansami.jpg);
-}
+  }
 
-span.highlight {
+  span.highlight {
     background-color: #ffffd0;
-}
+  }
 
-label {
+  label {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
-}
+  }
 
-.reveal {
-  max-height: 0;
-  transition: max-height 0.15s ease-out;
-  overflow: hidden;
-}
-.doc{
-  color:red;
-}
+  .reveal {
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+  }
 
-input:checked + label + .reveal {
-  max-height: 500px;
-  transition: max-height 0.25s ease-in;
-}
+  .doc {
+    color: red;
+  }
 
-input + label:after { content: ""; }
-input:checked + label:after { content: ""; }
+  input:checked+label+.reveal {
+    max-height: 500px;
+    transition: max-height 0.25s ease-in;
+  }
 
+  input+label:after {
+    content: "";
+  }
 
-
-
-
-
-
-
+  input:checked+label:after {
+    content: "";
+  }
 
 
 
@@ -173,7 +210,15 @@ input:checked + label:after { content: ""; }
 
 
 
-/*a {
+
+
+
+
+
+
+
+
+  /*a {
   color: #0254EB;
 }
 a:visited {
@@ -181,35 +226,31 @@ a:visited {
 }*/
 
 
-a.morelink {
-  text-decoration:none;
-  outline: none;
-}
-.morecontent span {
-  display: none;
+  a.morelink {
+    text-decoration: none;
+    outline: none;
+  }
 
-}
+  .morecontent span {
+    display: none;
 
-
-
-
-
+  }
 </style>
 
 
 
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146768978-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146768978-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'UA-146768978-1');
-</script>
+    gtag('config', 'UA-146768978-1');
+  </script>
 
 
   <title>Zishan Sami</title>
@@ -223,306 +264,478 @@ a.morelink {
 </head>
 
 <body>
-<div class="container">
+  <div class="container">
 
-	<hr /> <br />
-  <div class="row">
-    <div id="profile-img" class="col-prof-pic cropcircle" aria-label="zishan sami"></div>
-    <div class="col-bio">
-      <p align="center">
-		  <name>Zishan Sami</name> <br />
-		  zishansami102@gmail.com
+    <hr /> <br />
+    <div class="row">
+      <div id="profile-img" class="col-prof-pic cropcircle" aria-label="zishan sami"></div>
+      <div class="col-bio">
+        <p align="center">
+          <name>Zishan Sami</name> <br />
+          zishansami102@gmail.com
 
-	  </p>
+        </p>
 
-      <p>I am an Applications Developer at <a target="_blank" href = "http://www.iitkgp.ac.in/department/MI">Oracle</a>, India.</p>
-      <p> In 2020, I graduated from <a target="_blank" href="http://www.iitkgp.ac.in/">IIT Kharagpur</a> with a Dual Degree (B.Tech. + M.Tech.) in <a target="_blank" href = "http://www.iitkgp.ac.in/department/MI">Mining Engineering</a>. My experience and expertise lies around the areas of machine learning and deep learning and it's applications in computer vision &amp; natural language processing. I did my Bachelor Thesis on a more specific problem of machine learning called <i>Continual Learning</i> which will help humans build AI more like humans. It was done under the guidance of <a target="_blank" href="https://scholar.google.co.in/citations?user=5bXSZPYAAAAJ&hl=en">Prof. Pabitra Mitra</a>, <i>Department of Computer Science, IIT Kharagpur</i>.
-      </p>
-      
-      <p>In the summer of 2019, I worked at <a target="_blank" href="https://www.research.ibm.com/labs/india/">IBM Research</a> as
-      an <i>AI Research Intern</i> in their <i>Industrial AI Applications</i> team working on deep learning methods for field boundary identification &amp; segmentation using satellite images. Prior to this, I interned at <a target="_blank" href="https://www.capillarytech.com/">Capillary Technologies</a> in summer 2018 as a <i>Machine Learning Intern</i> where I worked on real-time Person Re-Identification problem and it was published in <a target="_blank" href="http://cvit.iiit.ac.in/icvgip18/">ICVGIP 2018</a>.
-      
-      </p>
+        <p>
+          I am Zishan, a 2020 Dual Degree graduate(B.Tech. + M.Tech.) from <a target="_blank" href="http://www.iitkgp.ac.in/">IIT Kharagpur</a> and currently working full-time as an Applications Engineer at <a target="_blank" href="http://www.iitkgp.ac.in/department/MI">Oracle</a>,
+          Bangalore. I have been doing part-time freelancing work in web3 since last year with intentions to gain experience and move to full-time soon. 
+        </p>
+          
+        <p>
+          I started my web3 journey last year with a scholarship from <a target="_blank" href="https://twitter.com/zishansami102/status/1429016214941011972">Coinbase</a> for participating in <a target="_blank" href="https://www.dappcamp.xyz/">DappCamp</a>, an Ethereum Bootcamp by <a target="_blank" href="https://twitter.com/iam_preethi"></a>Preethi Kasireddy.
+          I then moved on to do several freelancing project starting from building an ethereum based <a target="_blank" href="https://drive.google.com/drive/folders/1RBunU4bqO2rpe03VsWg4bKS7jISn3ijZ">dapp</a> end-to-end which does auto-payments for recurring subscription to working for <a target="_blank" href="https://twitter.com/SuperteamDAO">SuperteamDAO</a> where I helped several projects airdrop Solana NFTs to their community. 
+          For doing more serious work I participated in <a target="_blank" href="https://twitter.com/TheSecureum">Secureum</a> Bootcamp Epoch 0 (ethereum security and auditing bootcamp) and completed my <a target="_blank" href="https://docs.google.com/document/d/1KsOu1gb0ZXuTMhRK34Yh6745il50a9_onRe_Qudyacc/edit">CARE Audit</a> for Sushiswap Bentobox. I also worked as a Technical Coach at <a target="_blank" href="https://www.dappcamp.xyz/">DappCamp</a> for cohort-2 in January.
+        </p>
+          
+        <p>Earlier during my college period, my experience and effort revolved around the areas of machine learning and deep learning and
+          it's applications in computer vision &amp; natural language processing. 
+          In the summer of 2019, I worked at <a target="_blank" href="https://www.research.ibm.com/labs/india/">IBM
+            Research</a> as
+          an <i>AI Research Intern</i> in their <i>Industrial AI Applications</i> team working on deep learning methods
+          for field boundary identification &amp; using satellite images. Prior to this, I interned at <a
+            target="_blank" href="https://www.capillarytech.com/">Capillary Technologies</a> in summer 2018 as a
+          <i>Machine Learning Intern</i> where I worked on real-time Person Re-Identification problem and it was
+          published in <a target="_blank" href="http://cvit.iiit.ac.in/icvgip18/">ICVGIP 2018</a>.
 
-      <p align=center>
-        <a target="_blank" href="mailto:zishansami102@gmail.com">Email</a> &nbsp;/&nbsp;
-    		<a target="_blank" href="https://drive.google.com/file/d/0B_V9W22F1zJCTGNVZEdyalV1cnM/view">Resume</a>&nbsp;/&nbsp;
-    		<a target="_blank" href="http://www.github.com/zishansami102">GitHub</a> &nbsp;/&nbsp;
-    		<a target="_blank" href="https://www.linkedin.com/in/zs102/">Linkedin</a>
+        </p>
 
-	  </p>
+        <p align=center>
+          <a target="_blank" href="mailto:zishansami102@gmail.com">Email</a> &nbsp;/&nbsp;
+          <a target="_blank"
+            href="https://drive.google.com/file/d/0B_V9W22F1zJCTGNVZEdyalV1cnM/view">Resume</a>&nbsp;/&nbsp;
+          <a target="_blank" href="http://www.github.com/zishansami102">GitHub</a> &nbsp;/&nbsp;
+          <a target="_blank" href="https://twitter.com/zishansami102">Twitter</a> &nbsp;/&nbsp;
+          <a target="_blank" href="https://www.linkedin.com/in/zs102/">Linkedin</a>
+
+        </p>
+      </div>
+
+    </div><br />
+    <hr /><br /><br />
+
+
+    <div class="row">
+      <heading>Experience</heading>
     </div>
 
-</div><br /> <hr /><br /><br />
-
-
-  <div class="row">
-	  <heading>Internships</heading>
-  </div>
-
-  <div class="row">
-  <div class="col-proj-pic"><img style="width:100%;", src='images/ibm_logo.png'></div>
-  <div class="col-proj-desc">
-	<a target="_blank" href="https://www.research.ibm.com/labs/india/">
-	  <papertitle>IBM Research</papertitle>
-	</a><br>
-	<strong>Summer Research Intern</strong><br>
-	<em>Bangalore, India </em > &nbsp;&bull; May - August 2019 &nbsp; <a target="_blank" class="doc" href="https://drive.google.com/file/d/1Aieq4qQNiH8jxE9rUWwaCMMmy8FOWSDn/view">&bull; Poster Link</a><br>
-	<p><div class="more">
-    The work done during this period is now a part of a <b>patent</b> filed by IBM in US. Objective was to develop deep learning models for agricultural field boundary segmentation using multi-spectral and multi-temporal satellite images. I  designed a deep <b>Spatio-Temporal Segmentation Network</b> architecture (ST-Net) which can extract both temporal and spatial features of a
-    region from the time series of its SAR snapshots and RGB images leveraging the phenology timeline of agriculture crops. ST-Net uses a combination of Pixel-wise 3D LSTMs and DeepLabV3+ for temporal and spatial feature extraction, respectively. Achieved an improvement of 6% in mIOU compared to its existing counterparts.
-  </div></p>
-  </div>
-</div>
-
-	<div class="row">
-
-    <div class="col-proj-pic"><img style="width:85%;", src='images/capillary_logo.png'></div>
-
-    <div class="col-proj-desc">
-      <a target="_blank" href="https://www.capillarytech.com/">
-        <papertitle>Capillary Technologies</papertitle>
-      </a><br>
-      <strong>Machine Learning Intern</strong><br>
-      <em>Bangalore, India </em > &nbsp;&bull; May - July 2018 &nbsp; <a target="_blank" class="doc" href="https://drive.google.com/open?id=1byyC182-pUc3eX-1QolCbmyJrMSQo6eh">&bull; Demo Link</a><br>
-      <p><div class="more">
-        Worked on <i>Person Re-identification (ReID)</i> problem to identify / re-identify people in
-        real time and tag them with unique labels. Proposed a new loss function called <b>Cluster Loss</b> for deep CNN architectures motivated from triplet loss. Cluster Loss learns feature representations of people in a class independent way, forming round and separated clusters of all the classes. Improved the Rank-1 accuracy by 3% and mAP by 6% on two popular datasets.
-      </div></p>
+    <div class="row">
+      <div class="col-proj-pic"><img style="width:100%;" , src='images/orcl-logo.png'></div>
+      <div class="col-proj-desc">
+        <a target="_blank" href="https://www.oracle.com/in/index.html">
+          <papertitle>Oracle</papertitle>
+        </a><br>
+        <strong>Applications Engineer</strong><br>
+        <em>Bangalore, India </em> &nbsp;&bull; September 2020 - Now &nbsp;<br>
+        <p>
+        <div class="more">
+          Working on building Rewards Service system for Oracle Cloud. Tech stack includes Java, Spring-Boot, Apache Kafka, Oracle DB.
+        </div>
+        </p>
+      </div>
     </div>
- 
-  </div>
- 
 
- <div class="row">
-    <heading>Publications</heading>
-  </div>
+    <div class="row">
+      <div class="col-proj-pic"><img style="width:100%;" , src='images/dappcamp-logo.png'></div>
+      <div class="col-proj-desc">
+        <a target="_blank" href="https://www.dappcamp.xyz/">
+          <papertitle>DappCamp</papertitle>
+        </a><br>
+        <strong>Technical Coach</strong><br>
+        <em>Remote </em> &nbsp;&bull; January - February 2022 &nbsp;
+        <p>
+          <div class="more">
+            Mentored and guided 4 teams from cohort-2 in their bootcamp projects who were new to the Ethereum development.
+            Contributed in their project ideation, designing system architecture and resolving any technical roadblocks.
+          </div>
+        </p>
+      </div>
+    </div>
 
-  <div class="row">
-    <div class="col-proj-pic"><img src='images/publ.gif'></div>
-    <div class="col-proj-desc">
-      <a target="_blank" href="https://arxiv.org/pdf/1812.10325.pdf">
-		  <papertitle>Cluster Loss for Person Re-Identification</papertitle>
+    <div class="row">
+      <div class="col-proj-pic"><img style="width:100%;" , src='images/sumaiya-logo3.png'></div>
+      <div class="col-proj-desc">
+        <a target="_blank" href="https://drive.google.com/drive/folders/1RBunU4bqO2rpe03VsWg4bKS7jISn3ijZ">
+          <papertitle>Sumaiya Consultancy</papertitle>
+        </a><br>
+        <strong>Solidity Developer</strong><br>
+        <em>Remote </em> &nbsp;&bull; October - December 2021 &nbsp; <a target="_blank" class="doc"
+          href="https://drive.google.com/drive/folders/1RBunU4bqO2rpe03VsWg4bKS7jISn3ijZ">&bull; Demo Video</a>
+          &nbsp; <a target="_blank" class="doc"
+          href="https://recurring-billing.netlify.app">&bull; Product Link (Ropsten Only)</a><br>
+        <p>
+          <div class="more">
+            Developed a decentralised protocol for recurring crypto payments such as monthly or yearly 
+            subscriptions. Deployed the protocol contract to Ethereum Ropsten Network and integrated it 
+            to a UI dashboard built in React. Tech. Stack included Solidity, Hardhat, NodeJs, Mocha/Chai and React.
+          </div>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-proj-pic"><img style="width:100%;" , src='images/ibm_logo.png'></div>
+      <div class="col-proj-desc">
+        <a target="_blank" href="https://www.research.ibm.com/labs/india/">
+          <papertitle>IBM Research</papertitle>
+        </a><br>
+        <strong>Summer Research Intern</strong><br>
+        <em>Bangalore, India </em> &nbsp;&bull; May - August 2019 &nbsp; <a target="_blank" class="doc"
+          href="https://drive.google.com/file/d/1Aieq4qQNiH8jxE9rUWwaCMMmy8FOWSDn/view">&bull; Poster Link</a><br>
+        <p>
+        <div class="more">
+          The work done during this period is now a part of a <b>patent</b> filed by IBM in US. Objective was to develop
+          deep learning models for agricultural field boundary segmentation using multi-spectral and multi-temporal
+          satellite images. I designed a deep <b>Spatio-Temporal Segmentation Network</b> architecture (ST-Net) which
+          can extract both temporal and spatial features of a
+          region from the time series of its SAR snapshots and RGB images leveraging the phenology timeline of
+          agriculture crops. ST-Net uses a combination of Pixel-wise 3D LSTMs and DeepLabV3+ for temporal and spatial
+          feature extraction, respectively. Achieved an improvement of 6% in mIOU compared to its existing counterparts.
+        </div>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-proj-pic"><img style="width:85%;" , src='images/capillary_logo.png'></div>
+
+      <div class="col-proj-desc">
+        <a target="_blank" href="https://www.capillarytech.com/">
+          <papertitle>Capillary Technologies</papertitle>
+        </a><br>
+        <strong>Machine Learning Intern</strong><br>
+        <em>Bangalore, India </em> &nbsp;&bull; May - July 2018 &nbsp; <a target="_blank" class="doc"
+          href="https://drive.google.com/open?id=1byyC182-pUc3eX-1QolCbmyJrMSQo6eh">&bull; Demo Link</a><br>
+        <p>
+        <div class="more">
+          Worked on <i>Person Re-identification (ReID)</i> problem to identify / re-identify people in
+          real time and tag them with unique labels. Proposed a new loss function called <b>Cluster Loss</b> for deep
+          CNN architectures motivated from triplet loss. Cluster Loss learns feature representations of people in a
+          class independent way, forming round and separated clusters of all the classes. Improved the Rank-1 accuracy
+          by 3% and mAP by 6% on two popular datasets.
+        </div>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <heading>Hackathons & Bootcamps</heading>
+      <br />
+    </div>
+
+    <div class="row">
+      <div class="col-proj-pic"><img src='images/secureum-logo.jpeg'></div>
+      <div class="col-proj-desc">
+        <a target="_blank"
+          href="https://www.youtube.com/watch?v=1ni_LsOl4YE&list=PL0aneeQMqbvLjs0cwi2qGH2r_ZPdHb2xG&index=7">
+          <papertitle>Secureum | Ethereum Security and Auditing Bootcamp </papertitle>
+        </a><br>
+        <strong>Ranked 50/1024</strong> &bull; October - December 2021 &nbsp; <a target="_blank" , class="doc" ,
+          href="https://docs.google.com/document/d/1KsOu1gb0ZXuTMhRK34Yh6745il50a9_onRe_Qudyacc/edit">&bull; Audit Report</a>
+          &nbsp; <a target="_blank" , class="doc" ,
+          href="https://opensea.io/assets/matic/0xd2e20c7e6440dc8bfc76d01095946ee255a2f6d3/44/">&bull; CARE NFT Badge</a><br>
+        <p>
+        <div class="more">
+          Completed 8 week long learning phase which covered Ethereum 101, internals of EVM, advanced Solidity,
+          security best practices, audit tools and techniques and CTFs.
+          Was selected (Ranked 50/1028) to perform audit on Sushiswap Bentobox as part if its CARE initiative. 
+          Got Ether NFT Badge for the audit report submitted.
+        </div>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-proj-pic"><img src='images/dappcamp-logo.png'></div>
+      <div class="col-proj-desc">
+        <a target="_blank"
+          href="https://www.youtube.com/watch?v=1ni_LsOl4YE&list=PL0aneeQMqbvLjs0cwi2qGH2r_ZPdHb2xG&index=7">
+          <papertitle>DappCamp | Ethereum Developer Bootcamp by Preethi Kasireddy </papertitle>
+        </a><br>
+        <strong>Coinbase Scholarship Recipient</strong> &bull; August 2021 &nbsp; <a target="_blank" , class="doc" ,
+          href="https://github.com/zishansami102/twitter-promotion-dapp">&bull; Product Repo</a><br>
+        <p>
+        <div class="more">
+          Built a decentralised app which allow brands to lock some rewards in a contract and automatically distribute it to people promoting the brand content on twitter using Chainlink
+        </div>
+        </p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-proj-pic"><img src='images/ms.png'></div>
+      <div class="col-proj-desc">
+        <a target="_blank"
+          href="https://www.youtube.com/watch?v=1ni_LsOl4YE&list=PL0aneeQMqbvLjs0cwi2qGH2r_ZPdHb2xG&index=7">
+          <papertitle>Microsoft Code.Fun.Do 2017 </papertitle>
+        </a><br>
+        <strong>Top 3 Team</strong> &bull; January 2017 &nbsp; <a target="_blank" , class="doc" ,
+          href="https://www.youtube.com/watch?v=1ni_LsOl4YE&list=PL0aneeQMqbvLjs0cwi2qGH2r_ZPdHb2xG&index=7">&bull; Demo
+          Link</a><br>
+        <p>
+        <div class="more">
+          Secured runner up position in the winner list out of 20+ participating teams at IIT Kharagpur. <br>
+          We developed a <b>messenger bot</b> called <a target="_blank"
+            href="https://www.facebook.com/chhukchhuk2/">Chhuk-Chhuk</a> which can respond to people on railway queries
+          like the status of trains, their routes, PNR status, etc.
+          Built a data scraper for real time railway information &amp; integrated multiple APIs for language
+          understanding capabilities. Full application backend was built on PHP.
+        </div>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-proj-pic"><img src='images/cap.jpg'></div>
+      <div class="col-proj-desc">
+        <a target="_blank" href="https://skillenza.com/challenge/iitkgp_datascienceinterns">
+          <papertitle>Capillary Data Science Challenge 2017</papertitle>
+        </a><br>
+        <strong>Runner Up</strong> &bull; September 2017 &nbsp; <a target="_blank" , class="doc" ,
+          href="https://github.com/zishansami102/Recommendation-Engine">&bull; GitHub Repo </a><br>
+        <p>
+        <div class="more">
+          We secured second position in the Machine Learning category out of 50+ participating teams.<br>
+          We developed a movie <b>recommendation system</b> which can suggest movies to the users based on their ratings
+          history on the mobile application. We did it by implementing a state of the art recommendation model called
+          Biased Matrix Factorization on 1-M Movielens dataset using Tensorflow and integrated it on Flask backend with
+          UI on android app.
+
+        </div>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-proj-pic"><img src='images/open2.png'></div>
+      <div class="col-proj-desc">
+        <a target="_blank" href="https://drive.google.com/open?id=1ImL2IGAlEVb1Y3WuMgRDKk2DwEG2kf5z">
+          <papertitle>OpenSoft 2019, Technology General Championship</papertitle>
+        </a><br>
+        <strong>Winner</strong> &bull; March 2019 &nbsp; <a target="_blank" class="doc"
+          href="https://drive.google.com/open?id=1ImL2IGAlEVb1Y3WuMgRDKk2DwEG2kf5z">&bull; Report Link </a><br>
+        <p>
+        <div class="more">
+          Designed a <b>natural language search engine</b> system for lawyers, legal experts and ordinary people where
+          they can search for legal acts and previous court cases more effectively.
+          Integrated submodules like Case Summarizer, Spelling Corrector, Query type detector, etc. Used <a
+            target="_blank" href="https://github.com/facebookresearch/InferSent">InferSent</a> as our sentence embeding
+          model to rank sentences with respect to the input query. Developed an effective system design for reducing the
+          search domain to small search space for fast ranking.
+        </div>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-proj-pic"><img src='images/safety.jpg'></div>
+      <div class="col-proj-desc">
+        <a target="_blank" href="https://github.com/zishansami102/Safety-Data-Analytics-Solution">
+          <papertitle>Safety Data Analytics Challenge 2017</papertitle>
+        </a><br>
+        <strong>Winner</strong> &bull; September 2017 &nbsp; <a target="_blank" class="doc"
+          href="https://github.com/zishansami102/Safety-Data-Analytics-Solution">&bull; GitHub Repo </a><br>
+        <p>
+        <div class="more">
+          Developed a machine learning model which can minimize the cost of customer retention &amp; acquisition of a
+          telecom company by accurately predicting its probable customer churning.
+        </div>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <heading>Open-Source</heading>
+    </div>
+
+    <div class="row">
+
+      <div class="col-proj-pic"><img src='images/cnn.png'></div>
+      <div class="col-proj-desc">
+        <a target="_blank" href="https://github.com/zishansami102/CNN-from-Scratch">
+          <papertitle>CNN-from-Scratch</papertitle>
+        </a><br>
+        <strong><i class="fa fa-github"></i> GitHub &nbsp; &nbsp; <i class="fa fa-star"></i> 220+ &nbsp; &nbsp; <i
+            class="fa fa-code-fork" aria-hidden="true"></i> 70+</strong><br>
+        <a target="_blank" class="doc" href="https://github.com/zishansami102/CNN-from-Scratch">&bull; Repository
+        </a>&nbsp; &nbsp; <a target="_blank" class="doc" href="https://cnndigits.pythonanywhere.com/  ">&bull; Live Demo
+        </a>
+        <p>
+        <div class="more">
+          A simple CNN implemented in <b>Numpy</b>. It is currently the most popular repository for the
+          ground up implementation of CNNs. Demo running on Flask server.
+        </div>
+        </p>
+      </div>
+    </div>
+
+
+    <div class="row">
+
+      <div class="col-proj-pic"><img src='images/proj2.png'></div>
+      <div class="col-proj-desc">
+        <a target="_blank" href="https://github.com/zishansami102/First-Impression">
+          <papertitle>First-Impression</papertitle>
+        </a><br>
+        <strong><i class="fa fa-github"></i> GitHub &nbsp; &nbsp; <i class="fa fa-star"></i> 20+ &nbsp; &nbsp; <i
+            class="fa fa-code-fork" aria-hidden="true"></i> 20+</strong><br>
+        <a target="_blank" class="doc" href="https://github.com/zishansami102/First-Impression">&bull; Repository
+        </a>&nbsp; &nbsp;
+        <p>
+        <div class="more">
+          A solution to the problem "First Impressions" given in ECCV’16. It is a TensorFlow implementation of a paper from ECCV’16 which can
+          predict the big five personality traits of a user from their short video.
+        </div>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <heading>Research & Publications</heading>
+    </div>
+
+    <div class="row">
+      <div class="col-proj-pic"><img src='images/publ.gif'></div>
+      <div class="col-proj-desc">
+        <a target="_blank" href="https://arxiv.org/pdf/1812.10325.pdf">
+          <papertitle>Cluster Loss for Person Re-Identification</papertitle>
         </a><br>
         <i>Doney Alex, <strong>Zishan Sami</strong>, Sumandeep Banerjee, Subrat Panda</i><br>
-        Published in <a target="_blank" href="https://cvit.iiit.ac.in/icvgip18/">ICVGIP 2018 </a> &nbsp; <a target="_blank" class="doc" href="https://arxiv.org/pdf/1812.10325.pdf">&bull; arXiv Link</a> &nbsp;&nbsp; <a target="_blank" class="doc" href="https://drive.google.com/open?id=1byyC182-pUc3eX-1QolCbmyJrMSQo6eh">&bull; Demo Link</a><br>
-      <p><div class="more">
-        <i>Abstract : </i>Person re-identification (ReID) is an important problem in computer vision, especially for video surveillance applications. The problem focuses on identifying people across different cameras or across different frames of the same camera. The main challenge lies in identifying the similarity of the same person against large appearance and structure variations, while differentiating between individuals. Recently, deep learning networks with triplet loss have become a common framework for person ReID. However, triplet loss focuses on obtaining correct orders on the training set. We demonstrate that it performs inferior in a clustering task. In this paper, we design a cluster loss, which can lead to the model output with a larger inter-class variation and a smaller intra-class variation compared to the triplet loss. As a result, our model has a better generalization ability and can achieve higher accuracy on the test set especially for a clustering task. We also introduce a batch hard training mechanism for improving the results and faster convergence of training.
-      </div></p>
+        Published in <a target="_blank" href="https://cvit.iiit.ac.in/icvgip18/">ICVGIP 2018 </a> &nbsp; <a
+          target="_blank" class="doc" href="https://arxiv.org/pdf/1812.10325.pdf">&bull; arXiv Link</a> &nbsp;&nbsp; <a
+          target="_blank" class="doc" href="https://drive.google.com/open?id=1byyC182-pUc3eX-1QolCbmyJrMSQo6eh">&bull;
+          Demo Link</a><br>
+        <p>
+        <div class="more">
+          <i>Abstract : </i>Person re-identification (ReID) is an important problem in computer vision, especially for
+          video surveillance applications. The problem focuses on identifying people across different cameras or across
+          different frames of the same camera. The main challenge lies in identifying the similarity of the same person
+          against large appearance and structure variations, while differentiating between individuals. Recently, deep
+          learning networks with triplet loss have become a common framework for person ReID. However, triplet loss
+          focuses on obtaining correct orders on the training set. We demonstrate that it performs inferior in a
+          clustering task. In this paper, we design a cluster loss, which can lead to the model output with a larger
+          inter-class variation and a smaller intra-class variation compared to the triplet loss. As a result, our model
+          has a better generalization ability and can achieve higher accuracy on the test set especially for a
+          clustering task. We also introduce a batch hard training mechanism for improving the results and faster
+          convergence of training.
+        </div>
+        </p>
+      </div>
     </div>
-  </div>
+    
+    <div class="row">
+      <div class="col-proj-pic"><img src='images/proj1.png'></div>
+      <div class="col-proj-desc">
+        <a target="_blank" href="https://drive.google.com/open?id=1Tx08dNaa9DvERyj7Ixt80vPXelQGLiDo">
+          <papertitle>Enabling Continual Learning by overcoming Catastrophic Forgetting</papertitle>
+        </a><br>
+        <strong>Bachelor Thesis</strong> | Guide : <a target="_blank"
+          href="https://scholar.google.co.in/citations?user=5bXSZPYAAAAJ&hl=en">Pabitra Mitra</a><br>
+        <em>Computer Science Department </em> &nbsp;&bull; Aug'18 - Apr'19 &nbsp; <a target="_blank" class="doc"
+          href="https://drive.google.com/open?id=1Tx08dNaa9DvERyj7Ixt80vPXelQGLiDo">&bull; Thesis Link</a><br>
+        <p>
+        <div class="more">
+          <i> Abstract</i> : Catastrophic Forgetting in deep neural networks is a term used in Continual
+          Learning literature to signify the drastic performance drop on earlier learned
+          tasks while learning a new task on the same model. The focus in continual
+          learning is to minimise the catastrophic forgetting as much as possible without
+          having access to the previous datasets. In this work we try to study the
+          extent of catastrophic forgetting and how to overcome them while learning
+          multiple tasks sequentially. We have implemented several popular methods
+          and have presented a detailed comparitive analysis between all the methods
+          on CIFAR100 dataset, by splitting it into 5 separate independent tasks. We
+          have also tried and tested merging two methods together and concluded that
+          our best performing combination is <a target="_blank" href="https://arxiv.org/abs/1606.09282">Lwf[8]</a> and
+          <a target="_blank" href="https://arxiv.org/pdf/1612.00796.pdf"> EWC[7]</a> combined.
+        </div>
+        </p>
+      </div>
+    </div>
 
-  <div class="row">
-    <heading>Research Projects</heading>
+    <div class="row">
+      <heading>Leadership Roles</heading>
+    </div>
+
+    <div class="row">
+      <div class="col-proj-pic"><img src="images/captain.jpg" alt="UC San Diego"></div>
+      <!--  <div class="col-proj-pic"><img src="images/captain2.jpg" alt="UC San Diego"></div> -->
+      <div class="col-proj-desc">
+
+
+        <a target="_blank" href="">
+          <papertitle>Captain, OpenSoft Team 2018-19</papertitle>
+        </a>
+        <br><em>Radhakrishnan Hall of Residence, IIT Kharagpur</em>
+        <p>Led the Gold Winning team of 15+ members from R.K. Hall of Residence in the Inter Hall OpenSoft Competition
+          2018-19.</p>
+
+        <a target="_blank" href="">
+          <papertitle>Technology Advisor, 2018-19</papertitle>
+        </a>
+        <br><em>Radhakrishnan Hall of Residence, IIT Kharagpur</em>
+        <p>Advised a pool of 200+ students from R.K. Hall of Residence for the prestigious annual <a target="_blank"
+            href="https://wiki.metakgp.org/w/General_Championship_(Technology)"> Technology General Championship
+            2018-19.</a></p>
+
+
+      </div>
+    </div>
+
+
     <br /><br />
-        My reserach interests broadly include machine learning and deep learning. In particular, I'm interested in research applicable to computer vision, continual learning / lifelong learning, and natural language understanding.
-  </div>
+    <hr />
+    <div class="row">
+      <p align="right">
+        <font size="2">
+          <center>
+            © 2019 Zishan Sami. All rights reserved. <br />
+            Website cloned from <a target="_blank" href="http://people.eecs.berkeley.edu/~barron/">here.</a>
 
-  <div class="row">
-    <div class="col-proj-pic"><img src='images/proj1.png'></div>
-    <div class="col-proj-desc">
-      <a target="_blank" href="https://drive.google.com/open?id=1Tx08dNaa9DvERyj7Ixt80vPXelQGLiDo">
-		  <papertitle>Enabling Continual Learning by overcoming Catastrophic Forgetting</papertitle>
-        </a><br>
-        <strong>Bachelor Thesis</strong> | Guide : <a target="_blank" href="https://scholar.google.co.in/citations?user=5bXSZPYAAAAJ&hl=en">Pabitra Mitra</a><br>
-       <em>Computer Science Department </em > &nbsp;&bull; Aug'18 - Apr'19 &nbsp; <a target="_blank" class="doc" href="https://drive.google.com/open?id=1Tx08dNaa9DvERyj7Ixt80vPXelQGLiDo">&bull; Thesis Link</a><br>
-      <p><div class="more">
-       <i> Abstract</i> : Catastrophic Forgetting in deep neural networks is a term used in Continual
-Learning literature to signify the drastic performance drop on earlier learned
-tasks while learning a new task on the same model. The focus in continual
-learning is to minimise the catastrophic forgetting as much as possible without
-having access to the previous datasets. In this work we try to study the
-extent of catastrophic forgetting and how to overcome them while learning
-multiple tasks sequentially. We have implemented several popular methods
-and have presented a detailed comparitive analysis between all the methods
-on CIFAR100 dataset, by splitting it into 5 separate independent tasks. We
-have also tried and tested merging two methods together and concluded that
-our best performing combination is <a target="_blank" href="https://arxiv.org/abs/1606.09282">Lwf[8]</a>  and <a target="_blank" href="https://arxiv.org/pdf/1612.00796.pdf"> EWC[7]</a> combined.
-      </div></p>
+          </center>
+        </font>
+      </p>
     </div>
+    <hr />
+
   </div>
-
-  <div class="row">
-    <div class="col-proj-pic"><img src='images/proj2.png'></div>
-    <div class="col-proj-desc">
-      <a target="_blank" href="https://github.com/ZISHANSAMI102/FIRST-IMPRESSION">
-		  <papertitle>Personality Detection</papertitle>
-        </a><br>
-         <strong>Research Project</strong> | Guide : <a target="_blank" href="https://scholar.google.co.in/citations?user=5bXSZPYAAAAJ&hl=en">Pabitra Mitra</a><br>
-       <em>Computer Science Department </em > &nbsp;&bull; Dec'17 - Apr'18 &nbsp;<a target="_blank" class="doc" href="https://github.com/ZISHANSAMI102/FIRST-IMPRESSION">&bull; GitHub Repo</a><br>
-      <p><div class="more">
-        Human Personality Traits Recognition from short introductory videos of users from Youtube (ECCV16 Challenge).
-        Implemented a paper proposing Deep Bi-modal Regression Network to predict
-        "big five" personality traits of people from the first impression of their videos.
-	 </div></p>
-    </div>
-  </div>
-
-  <div class="row">
-	<heading>Hackathons / Competitions</heading>
-  	<br /><br />
-  		  
-  </div>
-
-
-  <div class="row">
-    <div class="col-proj-pic"><img src='images/ms.png'></div>
-    <div class="col-proj-desc">
-      <a target="_blank" href="https://www.youtube.com/watch?v=1ni_LsOl4YE&list=PL0aneeQMqbvLjs0cwi2qGH2r_ZPdHb2xG&index=7">
-        <papertitle>Microsoft Code.Fun.Do 2017 </papertitle>
-      </a><br>
-      <strong>Top 3 Team</strong> &bull; January 2017 &nbsp; <a target="_blank", class="doc", href="https://www.youtube.com/watch?v=1ni_LsOl4YE&list=PL0aneeQMqbvLjs0cwi2qGH2r_ZPdHb2xG&index=7">&bull; Demo Link</a><br>
-      <p>  <div class="more">
-        Secured runner up position in the winner list out of 20+ participating teams at IIT Kharagpur. <br>
-        We developed a <b>messenger bot</b> called <a target="_blank" href="https://www.facebook.com/chhukchhuk2/">Chhuk-Chhuk</a> which can respond to people on railway queries
-        like the status of trains, their routes, PNR status, etc.
-        Built a data scraper for real time railway information &amp; integrated multiple APIs for language understanding capabilities. Full application backend was built on PHP.
-	 </div> </p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-proj-pic"><img src='images/cap.jpg'></div>
-    <div class="col-proj-desc">
-      <a target="_blank" href="https://skillenza.com/challenge/iitkgp_datascienceinterns">
-        <papertitle>Capillary Data Science Challenge 2017</papertitle>
-      </a><br>
-      <strong>Runner Up</strong> &bull; September 2017 &nbsp; <a target="_blank", class="doc", href="https://github.com/zishansami102/Recommendation-Engine">&bull; GitHub Repo </a><br>
-      <p><div class="more">
-        We secured second position in the Machine Learning category out of 50+ participating teams.<br>
-        We developed a movie <b>recommendation system</b> which can suggest movies to the users based on their ratings history on the mobile application. We did it by implementing a state of the art recommendation model called Biased Matrix Factorization on 1-M Movielens dataset using Tensorflow and integrated it on Flask backend with UI on android app.
-
-	  </div></p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-proj-pic"><img src='images/open2.png'></div>
-    <div class="col-proj-desc">
-  	<a target="_blank" href="https://drive.google.com/open?id=1ImL2IGAlEVb1Y3WuMgRDKk2DwEG2kf5z">
-  	  <papertitle>OpenSoft 2019, Technology General Championship</papertitle>
-  	</a><br>
-  	<strong>Winner</strong> &bull; March 2019 &nbsp; <a target="_blank" class="doc" href="https://drive.google.com/open?id=1ImL2IGAlEVb1Y3WuMgRDKk2DwEG2kf5z">&bull; Report Link </a><br>
-  	<p><div class="more">
-      Designed a <b>natural language search engine</b> system for lawyers, legal experts and ordinary people where they can search for legal acts and previous court cases more effectively.
-      Integrated submodules like Case Summarizer, Spelling Corrector, Query type detector, etc. Used <a target="_blank" href="https://github.com/facebookresearch/InferSent">InferSent</a> as our sentence embeding model to rank sentences with respect to the input query. Developed an effective system design for reducing the search domain to small search space for fast ranking.
-   </div> </p>
-    </div>
-  </div>
-
-  <div class="row">
-	<div class="col-proj-pic"><img src='images/safety.jpg'></div>
-	<div class="col-proj-desc">
-	  <a target="_blank" href="https://github.com/zishansami102/Safety-Data-Analytics-Solution">
-		<papertitle>Safety Data Analytics Challenge 2017</papertitle>
-	  </a><br>
-	 <strong>Winner</strong> &bull; September 2017 &nbsp; <a target="_blank" class="doc" href="https://github.com/zishansami102/Safety-Data-Analytics-Solution">&bull; GitHub Repo </a><br>
-	  <p><div class="more">
-    Developed a machine learning model which can minimize the cost of customer retention &amp; acquisition of a telecom company by accurately predicting its probable customer churning.
-    </div></p>
-	</div>
-  </div>
-
-  <div class="row">
-  <heading>Open-Source</heading>
-  </div>
-
-  <div class="row">
-
-    <div class="col-proj-pic"><img src='images/cnn.png'></div>
-    <div class="col-proj-desc">
-      <a target="_blank" href="https://github.com/zishansami102/CNN-from-Scratch">
-        <papertitle>CNN-from-Scratch</papertitle>
-      </a><br>
-      <strong><i class="fa fa-github"></i> GitHub &nbsp; &nbsp; <i class="fa fa-star"></i> 200+ &nbsp; &nbsp; <i class="fa fa-code-fork" aria-hidden="true"></i> 70+</strong><br>
-      <a target="_blank" class="doc" href="https://github.com/zishansami102/CNN-from-Scratch">&bull; Repository </a>&nbsp; &nbsp; <a target="_blank" class="doc" href="https://cnndigits.pythonanywhere.com/  ">&bull; Live Demo </a>
-      <p><div class="more">
-        A simple CNN implemented in <b>Numpy</b>. It is currently the most popular repository for the
-        ground up implementation of CNNs. Demo running on Flask server.
-      </div></p>
-    </div>
-  </div>
-
-
-
-  
-  <div class="row">
-  <heading>Leadership Roles</heading>
-  </div>
-
-  <div class="row">
-	<div class="col-proj-pic"><img src="images/captain.jpg" alt="UC San Diego"></div>
- <!--  <div class="col-proj-pic"><img src="images/captain2.jpg" alt="UC San Diego"></div> -->
-	<div class="col-proj-desc">
-	  
-
-		<a target="_blank" href="">
-		<papertitle>Captain, OpenSoft Team 2018-19</papertitle>
-		</a>
-		<br><em>Radhakrishnan Hall of Residence, IIT Kharagpur</em>
-    <p>Led the Gold Winning team of 15+ members from R.K. Hall of Residence in the Inter Hall OpenSoft Competition 2018-19.</p>
-
-		<a target="_blank" href="">
-		<papertitle>Technology Advisor, 2018-19</papertitle>
-		</a>
-		<br><em>Radhakrishnan Hall of Residence, IIT Kharagpur</em>
-    <p>Advised a pool of 200+ students from R.K. Hall of Residence for the prestigious annual <a target="_blank" href="https://wiki.metakgp.org/w/General_Championship_(Technology)"> Technology General Championship 2018-19.</a></p>
-
-		
-	</div>
-  </div>
-
- 
-  <br /><br /><hr />
-  <div class="row">
-  <p align="right">
-    <font size="2">
-		<center>
-	  © 2019 Zishan Sami. All rights reserved. <br />
-      Website cloned from <a target="_blank" href="http://people.eecs.berkeley.edu/~barron/">here.</a>
-
-  		</center>
-    </font>
-  </p>
-  </div>
-   <hr />
-
-</div>
 </body>
+
 </html>
 
 <script type="text/javascript">
-  $(document).ready(function() {
-  var showChar = 270;
-  var ellipsestext = " ... ";
-  var moretext = "more";
-  var lesstext = "less";
-  $('.more').each(function() {
-    var content = $(this).html();
+  $(document).ready(function () {
+    var showChar = 270;
+    var ellipsestext = " ... ";
+    var moretext = "more";
+    var lesstext = "less";
+    $('.more').each(function () {
+      var content = $(this).html();
 
-    if(content.length > showChar) {
+      if (content.length > showChar) {
 
-      var c = content.substr(0, showChar);
-      var h = content.substr(showChar, content.length - showChar);
+        var c = content.substr(0, showChar);
+        var h = content.substr(showChar, content.length - showChar);
 
-      var html = c + '<span class="moreelipses">'+ellipsestext+'</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">'+moretext+'</a></span>';
+        var html = c + '<span class="moreelipses">' + ellipsestext + '</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
 
-      $(this).html(html);
-    }
+        $(this).html(html);
+      }
 
+    });
+
+    $(".morelink").click(function () {
+      if ($(this).hasClass("less")) {
+        $(this).removeClass("less");
+        $(this).html(moretext);
+      } else {
+        $(this).addClass("less");
+        $(this).html(lesstext);
+      }
+      $(this).parent().prev().toggle();
+      $(this).prev().toggle();
+      return false;
+    });
   });
-
-  $(".morelink").click(function(){
-    if($(this).hasClass("less")) {
-      $(this).removeClass("less");
-      $(this).html(moretext);
-    } else {
-      $(this).addClass("less");
-      $(this).html(lesstext);
-    }
-    $(this).parent().prev().toggle();
-    $(this).prev().toggle();
-    return false;
-  });
-});
 </script>
